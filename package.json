@@ -1,10 +1,10 @@
 {
-  "name": "alphabetize-object-keys",
+  "name": "@ryanburnette/alphabetize-object-keys",
   "version": "1.0.0",
   "description": "Alphabetize members of an object by key.",
   "main": "index.js",
   "scripts": {
-    "test": ""
+    "test": "mocha test.js"
   },
   "author": "Ryan Burnette <ryan.burnette@gmail.com>",
   "license": "ISC",
