@@ -1,5 +1,25 @@
-Alphabetize the members of an object alphebetically by the key.
+Turn this...
 
-Works recursively.
+```javascript
+var obj = {
+  c: 'c',
+  b: 'b',
+  a: {
+    b: 'b',
+    a: 'a'
+  }
+}
+```
 
-Try the test.
+...into this...
+
+```javascript
+var obj = {
+  a: {
+    a: 'a',
+    b: 'b'
+  }
+  b: 'b',
+  c: 'c',
+}
+```
