@@ -1,6 +1,6 @@
 {
   "name": "@ryanburnette/alphabetize-object-keys",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "Alphabetize members of an object by key.",
   "main": "index.js",
   "scripts": {
