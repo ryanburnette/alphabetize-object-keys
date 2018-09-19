@@ -2,7 +2,7 @@ function alphabetizeObjectKeys(obj) {
   var newObj = {};
 
   Object.keys(obj).sort().forEach(function (key) {
-    if (typeof obj[key] === 'object') {
+    if ((obj[key]).constructor.name === 'Object') {
       newObj[key] = alphabetizeObjectKeys(obj[key]);
     }
     else {
