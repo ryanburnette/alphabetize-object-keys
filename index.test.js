@@ -1,4 +1,4 @@
-var alphabetizeObjectKeys = require('./');
+var alphabetizeObjectKeys = require('./dist');
 
 test('sanity',function () {
   expect(alphabetizeObjectKeys).toBeInstanceOf(Function);

@@ -1,30 +1,17 @@
-;(function() {
-  function alphabetizeObjectKeys(obj) {
-    var newObj = {};
+// jshint node: true, asi: true
+'use strict';
 
-    Object.keys(obj).sort().forEach(function (key) {
-      if ((obj[key]).constructor.name === 'Object') {
-        newObj[key] = alphabetizeObjectKeys(obj[key]);
-      }
-      else {
-        newObj[key] = obj[key];
-      }
-    });
+module.exports = function alphabetizeObjectKeys(obj) {
+  var newObj = {};
 
-    return newObj;
-  }
-  
-  if (typeof module !== 'undefined' && typeof module.exports !== 'undefined') {
-    module.exports = alphabetizeObjectKeys;
-  }
-  else {
-    if (typeof define === 'function' && define.amd) {
-      define([], function() {
-        return alphabetizeObjectKeys;
-      });
+  Object.keys(obj).sort().forEach(function (key) {
+    if ((obj[key]).constructor.name === 'Object') {
+      newObj[key] = alphabetizeObjectKeys(obj[key]);
     }
     else {
-      window.alphabetizeObjectKeys = alphabetizeObjectKeys;
+      newObj[key] = obj[key];
     }
-  }
-})();
+  });
+
+  return newObj;
+}
